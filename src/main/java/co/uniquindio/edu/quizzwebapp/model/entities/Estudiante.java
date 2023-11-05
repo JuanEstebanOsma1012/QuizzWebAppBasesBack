@@ -15,8 +15,16 @@ import java.util.List;
 @EqualsAndHashCode (callSuper = true)
 @SuperBuilder
 public class Estudiante extends Usuario implements Serializable {
-    private String nombre;
+    
     @ManyToMany (mappedBy = "estudiantes")
     private List<Grupo> grupos;
 
+    public Estudiante(Integer id, String correo, String nombre, String password, List<Grupo> grupos){
+        this.id = id;
+        this.correo = correo;
+        this.nombre = nombre;
+        this.password = password;
+        this.grupos = grupos;
+        
+    }
 }
