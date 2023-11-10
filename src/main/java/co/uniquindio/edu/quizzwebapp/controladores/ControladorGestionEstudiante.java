@@ -19,11 +19,9 @@ public class ControladorGestionEstudiante {
     public IEstudianteDao estudianteDao;
 
     @PostMapping("/listarEstudiantes")
-    public Estudiante guardarCita(@RequestBody Map<String, Object> cuerpoPeticion) {
+    public Estudiante getEstudiante(@RequestBody Map<String, Object> cuerpoPeticion) {
 
-        Estudiante estudiante = estudianteDao.getLoginEstudiante(cuerpoPeticion.get("correo").toString(), cuerpoPeticion.get("contrasenia").toString());        
-        //Estudiante estudiante = new Estudiante(10023, cuerpoPeticion.get("correo").toString(), "Roxanna Vargas", cuerpoPeticion.get("contrasenia").toString(), null);
-        //Estudiante estudiante = new Estudiante(10023, "3qwqwrqwr", "Roxanna Vargas", "34qwrqwr", null);
+        Estudiante estudiante = estudianteDao.getLoginEstudiante(cuerpoPeticion.get("correo").toString(), cuerpoPeticion.get("contrasenia").toString());
         return estudiante;
     }
 

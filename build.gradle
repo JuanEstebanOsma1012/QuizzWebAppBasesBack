@@ -1,7 +1,6 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.1.4'
-    id 'io.spring.dependency-management' version '1.1.3'
+    id 'org.springframework.boot' version '2.6.0'
 }
 
 group = 'co.uniquindio.edu'
@@ -25,22 +24,23 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     compileOnly 'org.projectlombok:lombok'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.27'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-   
-
-    // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
-    implementation 'com.mysql:mysql-connector-j:8.1.0'
-
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+    implementation 'org.springframework:spring-core:5.3.9'
+    implementation 'org.springframework:spring-context:5.3.9'
+    implementation 'org.springframework:spring-web:5.3.9'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    
+    
+
+    // Choose one of the following dependencies for MySQL Connector/J
+    // implementation 'com.mysql:mysql-connector-j:8.1.0'  // Remove this line
+    // implementation 'mysql:mysql-connector-java:8.0.27'  // Remove this line
     runtimeOnly 'com.mysql:mysql-connector-java'
 
-
-
+    // Other dependencies go here
 }
 
 tasks.named('test') {
