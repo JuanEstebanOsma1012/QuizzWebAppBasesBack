@@ -22,7 +22,7 @@ public class Tema implements Serializable {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id;
+    private Long id;
 
     @NotNull
     @Column (columnDefinition = "varchar (500)")

@@ -25,6 +25,4 @@ public class PresentacionQuizz  implements Serializable {
     @Max(100)
     private int calificacion;
 
-
-
 }

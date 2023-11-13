@@ -23,7 +23,7 @@ public class Docente extends Usuario implements Serializable {
     private List<Grupo> grupos;
 
     @ToString.Exclude
-    @OneToMany
+    @OneToMany (mappedBy = "docente")
     private List <Banco> bancos;
 
     @ToString.Exclude

@@ -16,7 +16,6 @@ import java.util.List;
 @SuperBuilder
 public class Estudiante extends Usuario implements Serializable {
 
-
     @ManyToMany (mappedBy = "estudiantes")
     private List<Grupo> grupos;
 

@@ -23,7 +23,7 @@ public class Quizz {
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @NotNull
     private String nombre;
@@ -32,7 +32,7 @@ public class Quizz {
     private int tiempo;
     private int cantidadPreguntas;
     @ManyToOne
-    private Tema tema;
+    private Banco banco;
     @NotNull
     private String categoria;
     private LocalDateTime fechaYhora_Inicio;

@@ -26,7 +26,7 @@ public abstract class Pregunta implements Serializable {
     @EqualsAndHashCode.Include
     private Integer id;
 
-    @OneToOne
+    @ManyToOne
     private Banco banco;
 
     @NotNull
